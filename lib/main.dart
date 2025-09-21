@@ -10,10 +10,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.blue,
-        body: Center(
-          child: Text('Hello, World!'),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // 1st box
+            Expanded(child: Container(color: Colors.deepPurple)),
+
+            // 2st box
+            Expanded(flex: 2, child: Container(color: Colors.deepPurple[400])),
+
+            // 3st box
+            Expanded(child: Container(color: Colors.deepPurple[200])),
+          ],
         ),
       ),
     );
