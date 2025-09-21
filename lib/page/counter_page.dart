@@ -11,22 +11,31 @@ class _CounterPageState extends State<CounterPage> {
   // variable
   int _counter = 0;
   // method
-  void _incrementCounter(){
+  void _incrementCounter() {
     setState(() {
       _counter++;
     });
   }
+
   // UI
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Counter Page"),
+        centerTitle: true,
+        backgroundColor: Colors.deepPurple[100],
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("You pushed the button this many times;"),
-            Text(_counter.toString(), style: TextStyle(fontSize: 40),),
-            ElevatedButton(onPressed: _incrementCounter, child: Text("counter++"))
+            Text(_counter.toString(), style: TextStyle(fontSize: 40)),
+            ElevatedButton(
+              onPressed: _incrementCounter,
+              child: Text("counter++"),
+            ),
           ],
         ),
       ),
