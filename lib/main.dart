@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/page/counter_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -11,21 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // 1st box
-            Expanded(child: Container(color: Colors.deepPurple)),
-
-            // 2st box
-            Expanded(flex: 2, child: Container(color: Colors.deepPurple[400])),
-
-            // 3st box
-            Expanded(child: Container(color: Colors.deepPurple[200])),
-          ],
-        ),
-      ),
+      home: CounterPage(),
     );
   }
 }
